@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rohith Naidu | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#6366f1;
+  --secondary:#ec4899;
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --text:#1f2937;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins,sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:linear-gradient(135deg,#eef2ff,#fdf2f8);
+  color:var(--text);
+}
+
+/* NAVBAR */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:white;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  z-index:1000;
+}
+
+nav{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+}
+
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:500;
+}
+
+nav a:hover{color:var(--primary);}
+
+/* NAV LEFT */
+.nav-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* PROFILE IMAGE */
+.profile-pic{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  padding:3px;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  animation:float 3s ease-in-out infinite;
+}
+
+.profile-pic img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  background:white;
+}
+
+/* HOVER EFFECT */
+.profile-pic:hover{
+  animation:glow 1.5s infinite alternate;
+  cursor:pointer;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+  100%{transform:translateY(0)}
+}
+
+/* GLOW ANIMATION */
+@keyframes glow{
+  from{
+    box-shadow:0 0 10px rgba(99,102,241,.6);
+  }
+  to{
+    box-shadow:0 0 25px rgba(236,72,153,.9);
+  }
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:600px){
+  .profile-pic{
+    width:38px;
+    height:38px;
+  }
+}
+
+
+/* SECTIONS */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:120px 20px;
+}
+
+h1,h2{
+  margin-bottom:20px;
+  color:#111827;
+}
+
+p{opacity:.9}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.hero h1 span{color:var(--primary)}
+
+/* GRID + CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:22px;
+  padding:25px;
+  box-shadow:0 25px 50px rgba(0,0,0,.12);
+  transition:.4s ease;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+/* IMAGES */
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:16px;
+  margin-bottom:15px;
+}
+
+/* SKILLS */
+.skill{
+  margin-bottom:15px;
+}
+
+.bar{
+  height:10px;
+  background:#e5e7eb;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.bar span{
+  height:100%;
+  display:block;
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+}
+
+
+/* CONTACT */
+form{
+  max-width:500px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input,textarea{
+  padding:12px;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+  outline:none;
+}
+
+button{
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:white;
+  font-size:1rem;
+  cursor:pointer;
+}
+/* CONTACT CENTER */
+#contact{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+#contact form{
+  width:100%;
+  max-width:500px;
+}
+
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  background:white;
+  margin-top:50px;
+  opacity:.7;
+}
+
+/* ANIMATION */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:.8s ease;
+}
+
+.fade.show{
+  opacity:1;
+  transform:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+  <!-- LEFT SIDE -->
+  <div class="nav-left">
+    <!-- PROFILE IMAGE -->
+ <div class="profile-pic">
+  <img src="C:\Users\Rohit\Downloads\icon.jpg" alt="Rohith Profile">
+</div>
+
+
+
+
+    <h3>Rohith Naidu</h3>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="nav-right">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+
+</header>
+
+<!-- HOME -->
+<section id="home" class="hero fade">
+  <h1>Hi, I'm <span>Rohith Naidu</span></h1>
+  <p style="max-width:800px">
+   Im Rohith Naidu, a BCA student and aspiring web developer with a strong passion for creating modern, responsive, and visually appealing websites. I enjoy transforming ideas into interactive digital experiences using HTML, CSS, and JavaScript, with a focus on clean design and smooth user interactions. I’m constantly learning new technologies and improving my skills to build better, more efficient web applications. Beyond coding, I enjoy online gaming, exploring new places, and spending time with family and friends, which helps me stay creative, focused, and motivated.
+  </p>
+
+  <div class="grid">
+
+    <div class="card study-card">
+      <img src="C:\Users\Rohit\Downloads\code.jpeg">
+      <h3>🎓 Bachelor of Computer Applications (BCA)</h3>
+      <p>
+        Currently pursuing BCA with a strong interest in web development,
+        programming, and modern UI design.
+      </p>
+    </div>
+
+    <div class="card study-card">
+      <img src="C:\Users\Rohit\Downloads\develp imge.jpg">
+      <h3>💻 Programming & Development</h3>
+      <p>
+        Learning and practicing HTML, CSS, JavaScript, Python, and C through
+        hands-on projects and self-learning.
+      </p>
+    </div>
+
+    <div class="card study-card">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+      <h3>🚀 Project-Based Learning</h3>
+      <p>
+        Applying concepts by building real-world projects like music players,
+        calculators, and image galleries.
+      </p>
+    </div>
+
+  </div>
+
+
+</section>
+
+<!-- ABOUT + HOBBIES -->
+<section id="about" class="fade">
+  <h2>About Me</h2>
+  <p style="max-width:800px">
+   Apart from my academic and technical journey, I enjoy maintaining a balanced and active lifestyle. I love traveling and exploring new places, as it helps me refresh my mind and gain new perspectives. I also spend a good amount of time playing online games, which improves my focus, strategic thinking, and teamwork skills. Most importantly, I value the time I spend with my family and friends, as it keeps me grounded, motivated, and mentally positive. These activities help me stay creative, energetic, and ready to take on new challenges.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="C:\Users\Rohit\Downloads\online game image.jpg">
+      <h3>🎮 Online Gaming</h3>
+      <p>Enhances strategic thinking, focus, and teamwork skills.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac">
+      <h3>👨‍👩‍👧‍👦 Family & Friends</h3>
+      <p>Spending quality time keeps me motivated and balanced.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+      <h3>✈️ Traveling</h3>
+      <p>Exploring new places inspires creativity and new ideas.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="fade">
+  <h2>Skills</h2>
+
+  <div class="skill">HTML
+    <div class="bar"><span style="width:90%"></span></div>
+  </div>
+
+  <div class="skill">CSS
+    <div class="bar"><span style="width:85%"></span></div>
+  </div>
+
+  <div class="skill">JavaScript
+    <div class="bar"><span style="width:75%"></span></div>
+  </div>
+
+  <div class="skill">Python & C
+    <div class="bar"><span style="width:70%"></span></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="fade">
+  <h2>Projects</h2>
+
+  <div class="grid">
+
+    <a href="https://rohithdevs.github.io/CodeAlpha_ImageGallery/" target="_blank" class="card">
+      <img src="C:\Users\Rohit\Downloads\image gallery.avif">
+      <h3>Image Gallery</h3>
+      <p>Modern responsive image gallery with animations.</p>
+    </a>
+
+    <a href="https://rohithdevs.github.io/CodeAlpha_Calculator/" target="_blank" class="card">
+      <img src="C:\Users\Rohit\Downloads\calculator image.png">
+      <h3>Calculator UI</h3>
+      <p>Glassmorphism calculator with history panel.</p>
+    </a>
+
+    <a href=https://rohithdevs.github.io/CodeAlpha_MusicPlayer/ target="_blank" class="card">
+     <img src="C:\Users\Rohit\Downloads\nice.webp" alt="Music Player Project">
+     <h3>🎵 Music Player</h3>
+     <p>Modern animated music player with play/pause controls, volume rocker, dark/light mode, and responsive UI.</p>
+</a>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="fade">
+  <h2>Contact Me</h2>
+  <p style="max-width:500px;margin-bottom:25px;">
+    Have a project idea or just want to connect?  
+    Feel free to send me a message.
+  </p>
+
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="4" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+<footer>© 2025 Rohith Naidu</footer>
+
+<script>
+const faders=document.querySelectorAll('.fade');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:.2});
+
+faders.forEach(f=>observer.observe(f));
+</script>
+
+</body>
+</html>
